@@ -1,8 +1,10 @@
-let toDoInput = document.querySelector('input');
-const toDoList = document.querySelector('.list');
+const input = document.querySelector('input');
+const list = document.querySelector('.list');
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', makeList);
 function makeList() {
-    toDoList.textContent = toDoInput.value;
-
+    const p = document.createElement('p');
+    p.textContent = input.value;
+    list.appendChild(p);
+    input.value = '';
 }
-
-document.querySelector('.btn').addEventListener('click', makeList);
