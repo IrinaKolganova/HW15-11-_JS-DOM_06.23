@@ -1,3 +1,7 @@
+// document.onclick = function (event) {
+//     console.log(event.target.tagName);
+// }
+
 const input = document.querySelector('input');
 const list = document.querySelector('.list');
 const btn = document.querySelector('.btn');
@@ -8,3 +12,4 @@ function makeList() {
     list.appendChild(p);
     input.value = '';
 }
+list.addEventListener('click', function (evt) { if (evt.target.tagName === 'P') { evt.target.classList.add('del'); } })
